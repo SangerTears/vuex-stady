@@ -11,14 +11,21 @@
     <div v-if="fatherComponent=='item'">
       <div class="item_back item_container_style">
         <div class="item_list_container" v-if="itemDetail.length > 0">
-          <header class="item_title"></header>
+          <header class="item_title">{{itemDetail[itemNum-1].topic_name}}</header>
+          <ul>
+            <li v-for="(item, index) in itemDetail[itemNum-1].topic_answer" :key="index"
+            @click="choosed(index, item.topic_answer_id)" class="item_list">
+              <span class="option_style" :class="{'has_choose':choosedNum==index}">{{chooseType(index)}}</span>
+              <span class="otion_detail">{{item.answer_name}}</span>
+            </li>
+          </ul>
         </div>
       </div>
       <span class="next_item button_style" @click="nextItem" v-if="itemNum < itemDetail.length"></span>
       <span class="submit_item button_style" v-else @click="submitAnswer"></span>
     </div>
   </section>
-</template>
+</template>  
 
 <script>
 import {mapState, mapActions} from 'vuex'
