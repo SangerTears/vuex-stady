@@ -53,7 +53,8 @@ import {mapState, mapActions} from 'vuex'
       ]),
       // 点击下一题
       nextItem(){
-        if(this.choosedNum !==null){
+        if(this.choosedNum !== 
+        null){
           this.choosedNum = null;
           // 保存答案,题目加索引,跳转下一题
           this.addNum(this.choosedId)
