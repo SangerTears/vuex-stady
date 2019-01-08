@@ -1,8 +1,8 @@
 <template>
   <section>
     <header class="top_tips">
-      <div class="num_tip" v-if="fatherComponent=='home'">{{level}}</div>
-      <div class="num_tip" v-if="fatherComponent=='item'">题目{{itemNum}}</div>
+      <div class="num_tip" v-if="fatherComponent == 'home'">{{level}}</div>
+      <div class="num_tip" v-if="fatherComponent == 'item'">题目{{itemNum}}</div>
     </header>
     <div v-if="fatherComponent=='home'">
       <div class="home_logo item_container_style"></div>
@@ -53,8 +53,7 @@ import {mapState, mapActions} from 'vuex'
       ]),
       // 点击下一题
       nextItem(){
-        if(this.choosedNum !== 
-        null){
+        if(this.choosedNum !== null){
           this.choosedNum = null;
           // 保存答案,题目加索引,跳转下一题
           this.addNum(this.choosedId)

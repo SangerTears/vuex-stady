@@ -18,6 +18,6 @@ import itemcontainer from '../../components/itemcontainer'
     }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 
 </style>
