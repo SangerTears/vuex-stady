@@ -8,13 +8,13 @@
         <div class="result_tip">{{scoreTips}}</div>
     </div>
     <div class="share_button" @click="showCover"></div>
-    <div class="share_code">
+    <!-- <div class="share_code">
         <header class="share_header">关注葡萄指甲,获取答案</header>
         <img src="../../assets/images/4-4.png" height='212' width="='212'"  class="code_img" alt="">
     </div>
     <div class="share_cover" v-show="showHide" @click="showCover">
         <img src="../../assets/images/5-2.png" alt="" class="share_img">
-    </div>
+    </div> -->
 </div>
 </template>
 

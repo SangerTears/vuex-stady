@@ -15,7 +15,7 @@
           <ul>
             <li v-for="(item, index) in itemDetail[itemNum-1].topic_answer" :key="index"
             @click="choosed(index, item.topic_answer_id)" class="item_list">
-              <span class="option_style" :class="{'has_choose':choosedNum==index}">{{chooseType(index)}}</span>
+              <span class="option_style" :class="{'has_choosed':choosedNum==index}">{{chooseType(index)}}</span>
               <span class="otion_detail">{{item.answer_name}}</span>
             </li>
           </ul>
@@ -90,7 +90,7 @@ import {mapState, mapActions} from 'vuex'
       // 初始化信息
       if(this.fatherComponent == 'home'){
         this.initializeData();
-        document.body.style.backgroundImage = 'url(../../../assets/images/1-1.jpg)';
+        // document.body.style.backgroundImage = 'url(../../../assets/images/1-1.jpg)';
       }
     },
   }
